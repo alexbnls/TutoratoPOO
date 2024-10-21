@@ -1,0 +1,3 @@
+Tesla 10.0 30 B
+Microsoft 25.0 10 S
+Apple 50.0 5 B
