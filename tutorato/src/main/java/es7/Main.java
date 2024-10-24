@@ -7,10 +7,9 @@ public class Main {
         distributore.aggiungi(200);
         System.out.println("Litri iniziali: " + distributore.litri());
 
-        distributore.rifornisci(100);
+        distributore.rifornisci(220);
 
         System.out.println("Litri finali: " + distributore.litri());
         System.out.println("Ricavo: " + distributore.ricavo());
-
     }
 }

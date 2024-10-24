@@ -18,8 +18,8 @@ public class Distributore {
 
     public void rifornisci(int litri)
     {
-        pompa.rimuoviF(litri);
-        incasso += litri * sellPrice;
+        int litriReali = pompa.rimuoviF(litri);
+        incasso += litriReali * sellPrice;
     }
 
     public void aggiungi(int litri)

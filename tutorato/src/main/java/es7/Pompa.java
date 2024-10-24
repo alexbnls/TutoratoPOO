@@ -20,14 +20,16 @@ public class Pompa {
             diff = fuelLevel - fuelCapacity;
             fuelLevel = fuelCapacity;
         }
+
         return diff;
     }
-    public void rimuoviF(int n)
+    public int rimuoviF(int n)
     {
         if(n > fuelLevel)
             n = fuelLevel;
 
         fuelLevel -= n;
+        return n;
     }
 
     public int getFuelCapacity()
