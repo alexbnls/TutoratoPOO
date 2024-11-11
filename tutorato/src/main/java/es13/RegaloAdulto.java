@@ -14,7 +14,7 @@ public class RegaloAdulto extends Regalo implements Cloneable {
     @Override
     public String toString()
     {
-        return mittente;
+        return super.toString() + " [Mittente: " + mittente + "]";
     }
 
     @Override

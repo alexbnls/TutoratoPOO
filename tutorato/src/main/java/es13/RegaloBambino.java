@@ -18,7 +18,7 @@ public class RegaloBambino extends Regalo implements Cloneable{
     @Override
     public String toString()
     {
-        return "HoHoHo " + messaggio;
+        return super.toString() + " [Messaggio: HoHoHo " + messaggio + "]";
     }
 
     public boolean equals(Object anotherObject)
@@ -40,5 +40,17 @@ public class RegaloBambino extends Regalo implements Cloneable{
         clone.nomeBimbo = this.nomeBimbo;
         clone.ageBimbo = this.ageBimbo;
         return clone;
+    }
+
+    public String getNomeBimbo() {
+        return nomeBimbo;
+    }
+
+    public int getAgeBimbo() {
+        return ageBimbo;
+    }
+
+    public String getMessaggio() {
+        return messaggio;
     }
 }

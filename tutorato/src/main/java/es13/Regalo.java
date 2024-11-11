@@ -1,10 +1,11 @@
 package es13;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.GregorianCalendar;
 
 public class Regalo implements Cloneable {
-    private final GregorianCalendar dataConsegna;
+    private GregorianCalendar dataConsegna;
     private final double peso;
     private final String regioneDestinatario;
 
@@ -25,11 +26,16 @@ public class Regalo implements Cloneable {
         };
     }
 
- //   @Override
-//    public String toString()
-//    {
-//        return "Data: " + dataConsegna + " Peso: " + peso + " Regione destinazione: " + regioneDestinatario;
-//    }
+    private final String getFormattedCalendar() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        return sdf.format(dataConsegna.getTime());
+    }
+
+    @Override
+    public String toString()
+    {
+        return "[Data: " + getFormattedCalendar() + "] [Peso: " + peso + "] [Regione destinazione: " + regioneDestinatario + "]";
+    }
 
     @Override
     public boolean equals(Object anotherObject)
@@ -54,5 +60,21 @@ public class Regalo implements Cloneable {
         catch (CloneNotSupportedException e) {
             return null;
         }
+    }
+
+    public String getRegioneDestinatario() {
+        return regioneDestinatario;
+    }
+
+    public void setDataConsegna(GregorianCalendar data) {
+        dataConsegna = data;
+    }
+
+    public GregorianCalendar getDataConsegna() {
+        return dataConsegna;
+    }
+
+    public double getPeso() {
+        return peso;
     }
 }
