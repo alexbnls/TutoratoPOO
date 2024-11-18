@@ -38,7 +38,7 @@ public class Film implements Cloneable {
             return false;
         Film film = (Film) object;
 
-        return codice == film.dammiCodice() &&
+        return codice.equals(film.dammiCodice()) &&
                 titolo.equals(film.dammiTitolo());
     }
 
