@@ -12,12 +12,12 @@ public class CustomCollection<T extends Comparable<T>> {
         list = new ArrayList<>();
     }
 
-    void add(T element)
+    public void add(T element)
     {
         list.add(element);
     }
 
-    T get(int index)
+    public T get(int index)
     {
         if(list.size() <= index)
             return null;
@@ -25,12 +25,12 @@ public class CustomCollection<T extends Comparable<T>> {
         return list.get(index);
     }
 
-    int size()
+    public int size()
     {
         return list.size();
     }
 
-    void remove(int index)
+    public void remove(int index)
     {
         if(list.size() <= index)
             return;
