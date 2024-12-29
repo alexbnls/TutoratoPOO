@@ -60,6 +60,7 @@ public class Biblioteca {
     public void readFile(File file) throws IOException, ClassNotFoundException {
         Libro libro;
         ObjectInputStream in = new ObjectInputStream(new FileInputStream(file));
+
         while(true) {
             try {
                 libro = (Libro) in.readObject();

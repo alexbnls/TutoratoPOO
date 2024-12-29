@@ -16,14 +16,15 @@ public class BibliotecaTest {
             System.out.println("1. Inserisci libro\n2. Visualizza libri\n3. Salva su file i libri\n4. Recupera libri da file\n5. Cerca libro\n0. ESCI");
             System.out.print("Scegli: ");
             scelta = in.nextInt();
+            in.nextLine();
 
             switch (scelta)
             {
                 case 1:
                     System.out.print("Ins. titolo: ");
-                    String titolo = in.next();
+                    String titolo = in.nextLine();
                     System.out.print("Ins. autore: ");
-                    String autore = in.next();
+                    String autore = in.nextLine();
                     System.out.print("Ins. ISBN: ");
                     int isbn = in.nextInt();
                     System.out.print("Ins. anno: ");
@@ -60,7 +61,7 @@ public class BibliotecaTest {
                     if(c.equals("T"))
                     {
                         System.out.print("Ins. titolo");
-                        String t = in.next();
+                        String t = in.nextLine();
                         if(biblioteca.findLibro(t))
                             System.out.println("Trovato");
                         else
@@ -68,7 +69,7 @@ public class BibliotecaTest {
                     }
                     else if(c.equals("I"))
                     {
-                        System.out.print("Ins. titolo");
+                        System.out.print("Ins. ISBN");
                         int i = in.nextInt();
                         if(biblioteca.findLibro(i))
                             System.out.println("Trovato");
