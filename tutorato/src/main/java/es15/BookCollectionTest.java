@@ -1,5 +1,8 @@
 package es15;
 
+import java.util.Comparator;
+import java.util.function.Predicate;
+
 public class BookCollectionTest {
     public static void main (String[] args)
     {
@@ -15,6 +18,7 @@ public class BookCollectionTest {
         libri1.add(b1);
         libri1.add(b2);
         libri1.add(b3);
+        Comparator<Book> comparator = Book::compareTo;
 
         CustomCollection<Book> libriUniti = CustomCollection.merge(libri, libri1);
 
@@ -23,8 +27,8 @@ public class BookCollectionTest {
         System.out.println("Massimo della lista: " + libri.getMax());
         System.out.println();
 
-        libri.sort(Book.bookComparator);
-       // libri.sort((o1,o2) -> Integer.compare(o2.getAnno(), o1.getAnno()));  ESPRESSIONE BOOLEANA
+        //libri.sort(Book.bookComparator);
+        libri.sort((o1,o2) -> Integer.compare(o2.getAnno(), o1.getAnno()));  //ESPRESSIONE BOOLEANA
         System.out.println("Lista ordinata per anno:");
         CollectionUtils.printCollection(libri);
     }

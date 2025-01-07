@@ -29,4 +29,16 @@ public class Book implements Comparable<Book> {
     {
         return "[Titolo: " + titolo + "] [Autore: " + autore + "] [Anno pubblicazione: " + anno + "]";
     }
+
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public String getAutore() {
+        return autore;
+    }
+
+    public int getAnno() {
+        return anno;
+    }
 }
